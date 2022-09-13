@@ -1,0 +1,44 @@
+You have NN balls and KK boxes. You want to divide the NN balls into KK boxes such that:
+
+Each box contains \ge 1≥1 balls.
+No two boxes contain the same number of balls.
+Determine if it is possible to do so.
+
+Input Format
+The first line contains a single integer TT — the number of test cases. Then the test cases follow.
+The first and only line of each test case contains two space-separated integers NN and KK — the number of balls and the number of boxes respectively.
+Output Format
+For each test case, output YES if it is possible to divide the NN balls into KK boxes such that the conditions are satisfied. Otherwise, output NO.
+
+You may print each character of YES and NO in uppercase or lowercase (for example, yes, yEs, Yes will be considered identical).
+
+Constraints
+1 \leq T \leq 10^51≤T≤10 
+5
+ 
+1 \le N \le 10^91≤N≤10 
+9
+ 
+1 \le K \le 10^41≤K≤10 
+4
+ 
+Sample 1:
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int t;
+	cin>>t;
+	while(t--){
+	   int n,k;
+	   cin>>n>>k;
+	   k=(k*(k+1))/2;
+	   if(n>=k)
+	   cout<<"YES"<<endl;
+	   else
+	   cout<<"NO"<<endl;
+	}
+	return 0;
+}
