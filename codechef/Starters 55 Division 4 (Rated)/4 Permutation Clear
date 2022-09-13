@@ -1,0 +1,38 @@
+#include <iostream>
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int t;
+	cin>>t;
+	while(t--){
+	    int n;
+	    cin>>n;
+	    vector<int> v,x(n);
+	    for(int i=0;i<n;i++){
+	        cin>>x[i];
+	    }
+	    int k;
+	    cin>>k;
+	    vector<int>z(k);
+	    for(int i=0;i<k;i++){
+	        cin>>z[i];
+	    }
+	    set<int>s;
+	    for(int i=0;i<k;i++){
+	        s.insert(z[i]);
+	    }
+	    for(int i=0;i<n;i++){
+	        if(s.find(x[i])!=s.end()){
+	            s.erase(x[i]);
+	            continue;
+	        }
+	        v.push_back(x[i]);
+	    }
+	    for(int i=0;i<v.size();i++){
+	        cout<<v[i]<<" ";
+	    }cout<<endl;
+	}
+	return 0;
+}
