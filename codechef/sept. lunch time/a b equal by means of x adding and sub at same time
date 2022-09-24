@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+void solve(){
+    
+	 
+}
+
+int main() {
+	// your code goes here
+	int t;
+	cin>>t;
+	while(t--){
+	   long long int a,b,x;
+	    cin>>a>>b>>x;
+	    if(abs(a-b)%(2*x))cout<<"NO"<<endl;
+	    else cout<<"YES"<<endl;
+	        
+	}
+	return 0;
+}
